@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Knockout</title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<section id="west">
+			<div class="list">
+				<ul data-bind="foreach: personArray">
+					<li data-bind="click: $root.select">
+						<p>First Name: <span data-bind="text: firstName"></span></p>
+						<p>Last Name: <span data-bind="text: lastName"></span></p>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section id="center">
+			<div class="person" data-bind="template: { name: 'person-template', if: person, data: person }">
+			</div>
+		</section>
+		<section id="east">
+		</section>
+		<!-- Templates -->
+		<script type="text/html" id="person-template">
+			<p>First Name: <span id="firstName" data-bind="text: firstName"></span></p>
+			<p>Last Name: <span id="lastName" data-bind="text: lastName"></span></p>
+			<p>Age: <span id="age" data-bind="text: age"></span></p>
+			<p>Genre: 
+				<input type="radio" value="M" data-bind="checked: genre">Male</input>
+				<input type="radio" value="F" data-bind="checked: genre">Female</input>
+			</p>
+		</script>
+		<!-- Dependecies -->
+		<script src="lib/jquery-2.1.1.min.js"></script>
+		<script src="lib/knockout-3.2.0.js"></script>
+		<script src="lib/knockout.mapping-latest.js"></script>
+		<script src="lib/knockout.deepsubscribe.js"></script>
+		<!-- Code -->
+		<script src="js/view-model/persons.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>

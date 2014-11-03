@@ -1,0 +1,49 @@
+#west {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 256px;
+}
+
+#east {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 256px;
+}
+
+#center {
+	position: absolute;
+	top: 0;
+	right: 288px;
+	bottom: 0;
+	left: 288px;
+	overflow: hidden;
+}
+
+.list {
+	margin: 32px 32px;
+}
+
+.person {
+	height: 256px;
+	width: 256px;
+}
+
+ul {
+	padding: 0;
+	height: 512px;
+	overflow: auto;
+}
+
+li {
+	padding: 4px 16px;
+	list-style: none;
+	border-bottom: 1px dotted;
+}
+
+li:hover {
+	background-color: #EEE;
+}
